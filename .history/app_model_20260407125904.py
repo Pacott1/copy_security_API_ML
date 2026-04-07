@@ -153,7 +153,7 @@ def new_predict_json():
 
 
 ################
-@app.route("/new-predict", methods=["GET"])
+@app.route("/new-predict", methods=["POST"])
 def new_predict():
     try:
         results = predict_new_file()

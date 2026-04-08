@@ -238,8 +238,8 @@ def metrics():
         p = pipeline(partial(relleno_nulos_wrapper, how="mean"))
         df = p(df)
 
-        # Carga modelo en el marco local de la funcion
         global model
+        model = load_model()
 
         # 3. X e y (sin columnas manuales)
         X = df[COLS_FINAL].copy()
